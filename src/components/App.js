@@ -1,17 +1,20 @@
-import React from "react";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import About from "./components/About";
-import user from "../data/user";
-
+import React from 'react';
+import NavBar from './NavBar';
+import Home from './Home';
+import About from './About';
+const user = {
+  name: "John Doe",
+  bio: "A passionate developer.",
+  github: "https://github.com/johndoe",
+  linkedin: "https://linkedin.com/in/johndoe"
+};
 function App() {
   return (
     <div>
       <NavBar />
-      <Home name={user.name} city={user.city} />
-      <About bio={user.bio} links={user.links} />
+      <Home name={user.name} />
+      <About bio={user.bio} github={user.github} linkedin={user.linkedin} />
     </div>
   );
 }
-
 export default App;

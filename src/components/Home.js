@@ -1,13 +1,9 @@
-import React from "react";
-
-function Home(props) {
+import React from 'react';
+function Home({ name }) {
   return (
-    <div id="home">
-      <h1 style={{ color: "firebrick" }}>
-        {props.name} is a Web Developer from {props.city}
-      </h1>
+    <div>
+      <h1>Welcome, {name}!</h1>
     </div>
   );
 }
-
 export default Home;

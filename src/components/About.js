@@ -1,13 +1,11 @@
-import React from "react";
-import Links from "./Links";
+import React from 'react';
+import Links from './Links';
 
-function About(props) {
+function About({ bio, github, linkedin }) {
   return (
-    <div id="about">
-      <h2>About Me</h2>
-      {props.bio && props.bio.trim() !== "" && <p>{props.bio}</p>}
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github={props.links.github} linkedin={props.links.linkedin} />
+    <div>
+      {bio && bio.trim() !== "" && <p>{bio}</p>}
+      <Links github={github} linkedin={linkedin} />
     </div>
   );
 }
