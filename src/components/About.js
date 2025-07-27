@@ -3,7 +3,7 @@ import Links from './Links';
 
 function About({ bio, github, linkedin }) {
   return (
-    <div>
+    <div id="about">
       {bio && bio.trim() !== "" && <p>{bio}</p>}
       <Links github={github} linkedin={linkedin} />
     </div>
